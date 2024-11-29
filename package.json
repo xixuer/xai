@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "vercel deploy"
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.0.0"
   }
 } 
