@@ -1,1 +1,15 @@
- 
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/v1/(.*)",
+      "dest": "/api/proxy"
+    }
+  ],
+  "functions": {
+    "api/proxy.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  }
+} 
