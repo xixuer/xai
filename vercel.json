@@ -1,6 +1,13 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/v1/(.*)", "destination": "/api/v1" }
+  "routes": [
+    {
+      "src": "/v1/chat/completions",
+      "dest": "/api/chat/completions"
+    },
+    {
+      "src": "/v1/(.*)",
+      "dest": "/api/chat/completions"
+    }
   ]
 } 
