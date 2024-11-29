@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "rewrites": [
-    { 
-      "source": "/v1/chat/completions",
-      "destination": "/api/chat/completions"
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
     }
   ]
 } 
